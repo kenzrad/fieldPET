@@ -1,33 +1,4 @@
-//temporary bug object, will later be a GET request from the database
-var bugData = {
-    site: "09-PL01-Col-DR20",
-    date: "3/2/15",
-    beetles: 1,
-    blackflies: 0,
-    clams: 0,
-    common_netspinners: 74,
-    Crayfish: 0,
-    dragonflies_damselflies: 0,
-    flatworms: 0,
-    fw_shrimp: 0,
-    gilled_snails: 0,
-    gomphidae: 0,
-    hellgrammites: 0,
-    leeches: 0,
-    lunged_snails: 2,
-    mayflies: 0,
-    midges: 83,
-    most_caddisflies: 14,
-    most_frue_flies: 4,
-    other: 0,
-    scuds: 0,
-    sowbugs: 1,
-    stoneflies: 0,
-    true_bugs: 0,
-    worms: 63
-};
-
-function metrics(bugData){
+function calculateMetrics(bugData){
 
     //getting bug total
     var total = 0;
@@ -158,6 +129,7 @@ function metrics(bugData){
         }
 
         console.log(`Conditions: ${condition}`)
+        //generate modal for this information (include stream name, condition score, and condition interpretation)
     }
 
    metricOneCalc(metrics[0]);
@@ -169,7 +141,3 @@ function metrics(bugData){
    conditionAnalysis(indexScore);
 
 };
-
-// Commenting this out to have metrics included in index, but not run immediately.
-// Feel free to change if needed.
-//metrics(bugData);
