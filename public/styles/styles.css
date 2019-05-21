@@ -1,3 +1,86 @@
-.list-group-item {
-  line-height: 2.5;
+/* 
+/   ELEMENTS
+*/
+body {
+  background-color: #e1eff2;
+}
+
+input {
+  color: white;
+}
+
+/* 
+/   CLASSES
+*/
+.tabs {
+  background-color: transparent;
+}
+
+.tabs .tab a {
+  color: rgba(101,112,86, 0.7);
+  font-weight: 600;
+}
+
+.tabs .tab a:hover, .tabs .tab a.active {
+  color: #657056;
+}
+
+.tabs .indicator {
+  background-color: #657056;
+}
+
+.tabs .tab a:focus, .tabs .tab a:focus.active {
+  background-color: rgba(101,112,86, 0.2);
+}
+
+/* 
+/   IDS
+*/
+#dataEntryTab, #metricsTab {
+  margin-top: 20px;
+  padding: 20px;
+  min-height: 400px;
+  background-color: #acb5a0;
+  border-radius: 10px;
+}
+
+#bugTabs {
+  border-radius: 10px 10px 0 0;
+  margin-bottom: 10px;
+  background-color: white;
+}
+
+#loginModal {
+  background-color: #657056;
+  width: 500px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+#loginModal input[type=submit] {
+  color: black;
+}
+
+#loginModal h1 {
+  color: white;
+}
+
+#submitBugs {
+  background-color: transparent;
+  border: 3px solid #657056;
+  border-radius: 10px;
+  margin-top: 10px;
+  width: 150px;
+  height: 50px;
+  color: #657056;
+  font-weight: 600;
+  font-size: 20px;
+  transition-duration: 500ms;
+}
+
+#submitBugs:hover {
+  transform: scale(1.05);
+  color: #388f36;
+  border-color: #388f36;
+  background-color: rgba(56,143,54,0.1);
 }

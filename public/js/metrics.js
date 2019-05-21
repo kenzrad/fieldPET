@@ -170,4 +170,6 @@ function metrics(bugData){
 
 };
 
-metrics(bugData);
+// Commenting this out to have metrics included in index, but not run immediately.
+// Feel free to change if needed.
+//metrics(bugData);

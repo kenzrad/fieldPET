@@ -1,33 +1,41 @@
-<div id="home">
-  <div class="container">
-    <div class="row">
-      <div class="col-8 offset-2">
-        <h1>{{msg}}</h1>
-        <h2>This is our Home Page!</h2>
-        <form class="clearfix mb-4" action="POST">
-          <div class="form-group">
-            <label for="example-text">Example Text</label>
-            <input type="text" id="example-text" class="form-control" aria-describedby="example-text" placeholder="Enter Example Text">
-          </div>
-          <div class="form-group">
-            <label for="example-description">Example Description</label>
-            <textarea class="form-control" id="example-description" aria-describedby="example-description" placeholder="Enter Example Description"></textarea>
-          </div>
-          <button id="submit" class="btn btn-primary float-right">Submit</button>
-        </form>
-        <h3>Examples:</h3>
-        <ul id="example-list" class="list-group">
-          {{#each examples}}
-          <li data-id="{{this.id}}" class="list-group-item">
-            <a href="example/{{this.id}}">{{this.text}}</a>
-            <button class="btn btn-danger float-right delete">ｘ</button>
-          </li>
-          {{/each}}
-        </ul>
-      </div>
-    </div>
+<header class="container">
+  <div>
+    <h1>fieldPET</h1>
+    <ul class="tabs">
+      <li class="tab col s3"><a href="#dataEntryTab">Data Entry</a></li>
+      <li class="tab col s3"><a href="#metricsTab">Metrics</a></li>
+    </ul>
+  </div>
+</header>
+
+<div id="dataEntryTab" class="container">
+  <ul id="bugTabs" class="tabs">
+    <li class="tab col s3"><a href="#test-swipe-1">Bug 1</a></li>
+    <li class="tab col s3"><a href="#test-swipe-2">Bug 2</a></li>
+    <li class="tab col s3"><a href="#test-swipe-3">Bug 3</a></li>
+  </ul>
+  <div id="test-swipe-1" class="col s12 blue">Test1</div>
+  <div id="test-swipe-2" class="col s12 red">Test 2</div>
+  <div id="test-swipe-3" class="col s12 green">Test 3</div>
+
+  <div class="center-align">
+    <button id="submitBugs">SUBMIT</button>
   </div>
 </div>
 
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="/js/index.js"></script>
+<div id="metricsTab" class="container">
+  <p>Charts and Stuff Go Here.</p>
+</div>
+
+{{!-- LOGIN MODAL --}}
+<div id="loginModal" class="modal">
+  <div class="modal-content">
+    <h1>LOGIN</h1>
+
+    <form id="loginForm">
+      <input type="text" name="Username" placeholder="Username">
+      <input type="password" name="Password" placeholder="Password">
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+</div>
