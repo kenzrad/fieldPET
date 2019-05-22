@@ -60,5 +60,5 @@ typings/
 # next.js build output
 .next
 
-# Exclude .DS_Store files
+# its a mac thing
 .DS_Store
