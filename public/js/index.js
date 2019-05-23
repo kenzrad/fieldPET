@@ -10,6 +10,7 @@ $(document).ready(function(){
 });
 
 $("#submitBugs").on("click", function(e) {
+  e.preventDefault();
   $("#loginModal").modal('open');
 });
 
@@ -24,7 +25,23 @@ $("#loginForm").on("submit", function(e) {
   //if login passes, we will serialize the bug data and run the metrics function (passing the bug object as an argument)
 });
 
+$(".dec").on("click", function(e) {
+  e.preventDefault();
+  var val = $(this).next().val();
+  if (val - 1 >= 0) {
+    val--;
+  }
+  
+  $(this).next().val(val);
+});
 
+$(".inc").on("click", function(e) {
+  e.preventDefault();
+  var val = $(this).prev().val();
+  val++;
+
+  $(this).prev().val(val);
+});
 
 ////////BUG DATA TEST//////////
 //testData
