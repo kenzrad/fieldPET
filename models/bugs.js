@@ -1,5 +1,7 @@
+//We need to add validations and handle null for these, but we can do this later
+//Also need to add createdAt for JAWSDB
 module.exports = function(sequelize, DataTypes) {
-  var bugTable = sequelize.define("bugTable", {
+  var Bugs = sequelize.define("Bugs", {
     site: DataTypes.STRING,
     date: DataTypes.STRING,
     beetles: DataTypes.INTEGER,
@@ -7,7 +9,7 @@ module.exports = function(sequelize, DataTypes) {
     clams: DataTypes.INTEGER,
     common_netspinners: DataTypes.INTEGER,
     crayfish: DataTypes.INTEGER,
-    dragonflies: DataTypes.INTEGER,
+    dragonflies_damselflies: DataTypes.INTEGER,
     flatworms: DataTypes.INTEGER,
     fw_shrimp: DataTypes.INTEGER,
     gilled_snails: DataTypes.INTEGER,
@@ -17,14 +19,24 @@ module.exports = function(sequelize, DataTypes) {
     lunged_snails: DataTypes.INTEGER,
     mayflies: DataTypes.INTEGER,
     midges: DataTypes.INTEGER,
-    caddisflies: DataTypes.INTEGER,
-    frue_flies: DataTypes.INTEGER,
+    most_caddisflies: DataTypes.INTEGER,
+    most_true_flies: DataTypes.INTEGER,
     other: DataTypes.INTEGER,
-    scubs: DataTypes.INTEGER,
+    scuds: DataTypes.INTEGER,
     sowbugs: DataTypes.INTEGER,
     stoneflies: DataTypes.INTEGER,
     true_bugs:DataTypes.INTEGER,
     worms: DataTypes.INTEGER
   });
-  return bugTable;
+
+  //Associating Bugs with a Site and linking the foreign key situation
+  Bugs.associate = function(models) {
+    Bugs.belongsTo(models.Site, {
+      foreignKey: {
+        allowNull: false
+      }
+    });
+  };
+
+  return Bugs;
 };
