@@ -1,25 +1,48 @@
 var fs = require("fs");
 var path = require("path");
 var Sequelize = require("sequelize");
-var csv = require("csv");
 var basename = path.basename(module.filename);
 var env = process.env.NODE_ENV || "development";
 var config = require(__dirname + "/../config/config.json")[env];
 var db = {};
+
+
+
+
+
+////////Reading CSV Data and posting it to our database////////////
+//still need to add posting stuff!
+
 var csv = require('csv-parser');
+var bugData = [];
+var siteData = [];
 
-
-//read csv file and create object
+//read csv file and create bugData object
 fs.createReadStream(__dirname + "/data/bugs.csv")  
   .pipe(csv())
   .on('data', (row) => {
-    console.log(row);
+    bugData.push(row);
   })
   .on('end', () => {
-    console.log('CSV file successfully processed');
+    console.log('bugs.csv file successfully processed');
   }
 );
 
+//read csv file and create siteData object
+fs.createReadStream(__dirname + "/data/cmcStations.csv")  
+  .pipe(csv())
+  .on('data', (row) => {
+    siteData.push(row);
+  })
+  .on('end', () => {
+    console.log('cmcStations.csv File successfully processed');
+  }
+);
+
+
+
+
+////////////Usual Index Suspects for Sequelize//////////////////
 
 if (config.use_env_variable) {
   var sequelize = new Sequelize(process.env[config.use_env_variable]);
