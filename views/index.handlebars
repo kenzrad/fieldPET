@@ -10,17 +10,94 @@
 
 <div id="dataEntryTab" class="container">
   <ul id="bugTabs" class="tabs">
-    <li class="tab col s3"><a href="#test-swipe-1">Bug 1</a></li>
-    <li class="tab col s3"><a href="#test-swipe-2">Bug 2</a></li>
-    <li class="tab col s3"><a href="#test-swipe-3">Bug 3</a></li>
+    <li class="tab col s1"><a href="#B">Beetles</a></li>
+    <li class="tab col s1"><a href="#BF">Blackflies</a></li>
+    <li class="tab col s1"><a href="#C">Crayfish</a></li>
+    <li class="tab col s1"><a href="#CL">Clams</a></li>
+    <li class="tab col s1"><a href="#CN">Common Netspinners</a></li>
+    <li class="tab col s1"><a href="#DD">Dragonflies and Damselflies</a></li>
+    <li class="tab col s1"><a href="#F">Flatworms</a></li>
+    <li class="tab col s1"><a href="#GS">Gilled Snails</a></li>
+    <li class="tab col s1"><a href="#HFA">Hellgrammites, Fishflies, and Alderflies</a></li>
+    <li class="tab col s1"><a href="#L">Leeches</a></li>
+    <li class="tab col s1"><a href="#M">Mayflies</a></li>
+    <li class="tab col s1"><a href="#MC">Most Caddisflies</a></li>
+    <li class="tab col s1"><a href="#MTF">Most True Flies</a></li>
+    <li class="tab col s1"><a href="#OO">Other Organisms</a></li>
+    <li class="tab col s1"><a href="#SB">Sowbugs</a></li>
+    <li class="tab col s1"><a href="#SC">Scuds</a></li>
+    <li class="tab col s1"><a href="#SF">Stoneflies</a></li>
+    <li class="tab col s1"><a href="#LS">Lunged Snails</a></li>
+    <li class="tab col s1"><a href="#W">Worms</a></li>
+    <li class="tab col s1"><a href="#MI">Midges</a></li>
   </ul>
-  <div id="test-swipe-1" class="col s12 blue">Test1</div>
-  <div id="test-swipe-2" class="col s12 red">Test 2</div>
-  <div id="test-swipe-3" class="col s12 green">Test 3</div>
+  <form id="bugForm">
+    <div id="B" class="col s12">
+      {{> bugInputs name="B"}}
+    </div>
+    <div id="BF" class="col s12">
+      {{> bugInputs name="BF"}}
+    </div>
+    <div id="C" class="col s12">
+      {{> bugInputs name="C"}}
+    </div>
+    <div id="CL" class="col s12">
+      {{> bugInputs name="CL"}}
+    </div>
+    <div id="CN" class="col s12">
+      {{> bugInputs name="CN"}}
+    </div>
+    <div id="DD" class="col s12">
+      {{> bugInputs name="DD"}}
+    </div>
+    <div id="F" class="col s12">
+      {{> bugInputs name="F"}}
+    </div>
+    <div id="GS" class="col s12">
+      {{> bugInputs name="GS"}}
+    </div>
+    <div id="HFA" class="col s12">
+      {{> bugInputs name="HFA"}}
+    </div>
+    <div id="L" class="col s12">
+      {{> bugInputs name="L"}}
+    </div>
+    <div id="M" class="col s12">
+      {{> bugInputs name="M"}}
+    </div>
+    <div id="MC" class="col s12">
+      {{> bugInputs name="MC"}}
+    </div>
+    <div id="MTF" class="col s12">
+      {{> bugInputs name="MTF"}}
+    </div>
+    <div id="OO" class="col s12">
+      {{> bugInputs name="OO"}}
+    </div>
+    <div id="SB" class="col s12">
+      {{> bugInputs name="SB"}}
+    </div>
+    <div id="SC" class="col s12">
+      {{> bugInputs name="SC"}}
+    </div>
+    <div id="SF" class="col s12">
+      {{> bugInputs name="SF"}}
+    </div>
+    <div id="LS" class="col s12">
+      {{> bugInputs name="LS"}}
+    </div>
+    <div id="W" class="col s12">
+      {{> bugInputs name="W"}}
+    </div>
+    <div id="MI" class="col s12">
+      {{> bugInputs name="MI"}}
+    </div>
 
-  <div class="center-align">
-    <button id="submitBugs">SUBMIT</button>
-  </div>
+
+    <div class="center-align">
+      <button id="submitBugs">SUBMIT</button>
+    </div>
+  </form>
 </div>
 
 <div id="metricsTab" class="container">

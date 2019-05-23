@@ -9,6 +9,12 @@ input {
   color: white;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
 /* 
 /   CLASSES
 */
@@ -31,6 +37,35 @@ input {
 
 .tabs .tab a:focus, .tabs .tab a:focus.active {
   background-color: rgba(101,112,86, 0.2);
+}
+
+.inc, .dec {
+  height: 50px;
+  width: 40px;
+  padding: 0;
+  background-color: transparent;
+  border: 4px solid #657056;
+  border-radius: 15px;
+  color: #657056;
+  font-size: 35px;
+  font-weight: 700;
+  transition-duration: 500ms;
+}
+
+.inc:hover, .dec:hover {
+  transform: scale(1.1);
+}
+
+.inc:hover {
+  border-color: #388f36;
+  color: #388f36;
+  background-color: rgba(56, 143, 54, 0.1);
+}
+
+.dec:hover {
+  border-color: #fc4154;
+  color: #fc4154;
+  background-color: rgba(252, 65, 84, 0.1);
 }
 
 /* 
@@ -83,4 +118,35 @@ input {
   color: #388f36;
   border-color: #388f36;
   background-color: rgba(56,143,54,0.1);
+}
+
+#bugForm div:not(:last-child) {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#bugForm input {
+  text-align: center;
+  height: 75px;
+  width: 100px;
+  margin: 10px;
+  border: 5px solid #657056;
+  border-radius: 15px;
+  color: #657056;
+  font-size: 40px;
+  font-weight: 600;
+}
+
+#bugForm input::placeholder {
+  color:rgba(101, 112, 86, 0.6);
+}
+
+#bugForm div:nth-child(even):not(:last-child) {
+  background-color: #95bfbc;
+} 
+
+#bugForm div:nth-child(odd) {
+  background-color: #66a29e;
 }

@@ -12,17 +12,4 @@ module.exports = function(app) {
   });
 };
 
-  //Commenting this out because I don't think we will be deleting posting new sites just yet...
-    // app.post("/api/Bugs", function(req, res) {
-    //   db.Bugs.create(req.body).then(function(dbBugs) {
-    //     res.json(dbBugs);
-    //   });
-    // });
 
-  // Not needed for now
-    //   app.delete("/api/Bugs/:id", function(req, res) {
-    //     db.Bugs.destroy({ where: { id: req.params.id } }).then(function(dbBugs) {
-    //       res.json(dbBugs);
-    //     });
-    //   });
-    // };
