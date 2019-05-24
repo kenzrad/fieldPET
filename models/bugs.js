@@ -27,6 +27,7 @@ module.exports = function(sequelize, DataTypes) {
     stoneflies: DataTypes.INTEGER,
     true_bugs:DataTypes.INTEGER,
     worms: DataTypes.INTEGER
+    
   });
 
   //Associating Bugs with a Site and linking the foreign key situation

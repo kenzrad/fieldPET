@@ -6,42 +6,6 @@ var env = process.env.NODE_ENV || "development";
 var config = require(__dirname + "/../config/config.json")[env];
 var db = {};
 
-
-
-
-
-////////Reading CSV Data and posting it to our database////////////
-//still need to add posting stuff!
-
-var csv = require('csv-parser');
-var bugData = [];
-var siteData = [];
-
-//read csv file and create bugData object
-fs.createReadStream(__dirname + "/data/bugs.csv")  
-  .pipe(csv())
-  .on('data', (row) => {
-    bugData.push(row);
-  })
-  .on('end', () => {
-    console.log('bugs.csv file successfully processed');
-  }
-);
-
-//read csv file and create siteData object
-fs.createReadStream(__dirname + "/data/cmcStations.csv")  
-  .pipe(csv())
-  .on('data', (row) => {
-    siteData.push(row);
-  })
-  .on('end', () => {
-    console.log('cmcStations.csv File successfully processed');
-  }
-);
-
-
-
-
 ////////////Usual Index Suspects for Sequelize//////////////////
 
 if (config.use_env_variable) {

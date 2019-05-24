@@ -75,3 +75,4 @@ $(".inc").on("click", function(e) {
 
 //testData function
 // metrics(bugData);
+console.log(bugData);
