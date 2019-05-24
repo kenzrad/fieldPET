@@ -6,10 +6,6 @@ var env = process.env.NODE_ENV || "development";
 var config = require(__dirname + "/../config/config.json")[env];
 var db = {};
 
-
-
-
-
 ////////Reading CSV Data and posting it to our database////////////
 //still need to add posting stuff!
 
@@ -25,7 +21,9 @@ fs.createReadStream(__dirname + "/data/bugs.csv")
   })
   .on('end', () => {
     console.log('bugs.csv file successfully processed');
+    console.log(bugData);
   }
+
 );
 
 //read csv file and create siteData object
