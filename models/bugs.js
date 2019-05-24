@@ -27,12 +27,12 @@ module.exports = function(sequelize, DataTypes) {
     stoneflies: DataTypes.INTEGER,
     true_bugs:DataTypes.INTEGER,
     worms: DataTypes.INTEGER
-    
   });
 
   //Associating Bugs with a Site and linking the foreign key situation
   Bugs.associate = function(models) {
     Bugs.belongsTo(models.Site, {
+      defaultValue: 0,
       foreignKey: {
         allowNull: false
       }

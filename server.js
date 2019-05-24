@@ -41,14 +41,14 @@ db.sequelize.sync(syncOptions).then(function() {
     // var bugData = [];
     // var siteData = [];
     //read csv file and create siteData object
-    fs.createReadStream(__dirname + "/models/data/cmcStations.csv")  
-      .pipe(csv())
-      .on('data', (row) => {
-        console.log(row);
-        db.Site.create({row})
-        // db.Site.create( row );
-      })
-      .on('end', () => {
+    // fs.createReadStream(__dirname + "/models/data/cmcStations.csv")  
+    //   .pipe(csv())
+    //   .on('data', (row) => {
+    //     console.log(row);
+    //     db.Site.create({row})
+    //     // db.Site.create( row );
+    //   })
+    //   .on('end', () => {
         // for(var i = 0; i < siteData.length; i++) {
         //   db.Site.create({
         //     Code: siteData[i].Code,
@@ -120,6 +120,5 @@ db.sequelize.sync(syncOptions).then(function() {
       PORT
     );
   });
-});
 
 module.exports = app;
