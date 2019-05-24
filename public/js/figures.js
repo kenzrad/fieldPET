@@ -24,8 +24,5 @@ function testChart() {
 
 function generateOneMetricChart() {
     var oneMetricChart = new Chart(ctx, {
-        type: 'bar',
-        data: ,
-        options: options
     });
 }
