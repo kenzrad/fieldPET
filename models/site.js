@@ -12,14 +12,13 @@ module.exports = function(sequelize, DataTypes){
     Long: DataTypes.STRING,
     Cbseg: DataTypes.STRING,
     WaterBody: DataTypes.STRING,
-    Description:
-    DataTypes.STRING,
+    Description: DataTypes.STRING,
     Datum: DataTypes.STRING,
     CityCounty: DataTypes.STRING,
     Tidal: DataTypes.BOOLEAN,
     Comments: DataTypes.STRING,
     Fips: DataTypes.INTEGER,
-    Huc12: DataTypes.INTEGER,
+    Huc12: DataTypes.STRING,
     State: DataTypes.STRING,
     Huc6Name: DataTypes.STRING
   });

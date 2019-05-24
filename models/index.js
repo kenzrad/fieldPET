@@ -39,7 +39,6 @@ fs.createReadStream(__dirname + "/data/cmcStations.csv")
 
 
 
-
 ////////////Usual Index Suspects for Sequelize//////////////////
 
 if (config.use_env_variable) {
