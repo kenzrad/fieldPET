@@ -2,9 +2,6 @@
 //We may want to reorganize these data later (the header names aren't the best), but let's not worry about that now
 module.exports = function(sequelize, DataTypes){
   var Site = sequelize.define("Site", {
-    watershed: DataTypes.STRING,
-    county: DataTypes.STRING,
-    stream: DataTypes.STRING,
     Code: DataTypes.STRING,
     Name: DataTypes.STRING,
     NameLong: DataTypes.STRING,
