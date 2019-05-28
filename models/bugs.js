@@ -1,5 +1,7 @@
 //We need to add validations and handle null for these, but we can do this later
 //Also need to add createdAt for JAWSDB
+var Site = require("./site.js")
+
 module.exports = function(sequelize, DataTypes) {
   var Bugs = sequelize.define("Bugs", {
     site: DataTypes.STRING,
@@ -27,12 +29,12 @@ module.exports = function(sequelize, DataTypes) {
     stoneflies: DataTypes.INTEGER,
     true_bugs:DataTypes.INTEGER,
     worms: DataTypes.INTEGER
-    
   });
 
   //Associating Bugs with a Site and linking the foreign key situation
   Bugs.associate = function(models) {
     Bugs.belongsTo(models.Site, {
+      defaultValue: 0,
       foreignKey: {
         allowNull: false
       }
