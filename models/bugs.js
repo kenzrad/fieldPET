@@ -1,5 +1,7 @@
 //We need to add validations and handle null for these, but we can do this later
 //Also need to add createdAt for JAWSDB
+var Site = require("./site.js")
+
 module.exports = function(sequelize, DataTypes) {
   var Bugs = sequelize.define("Bugs", {
     site: DataTypes.STRING,
