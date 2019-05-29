@@ -21,7 +21,7 @@ function calculateMetrics(bugData){
 
     //metric1: mayflies + stoneflies + most_caddiflies / total * 100
     function metricOneCalc(metric) {
-        metric.score = parseInt(bugData.mayflies + bugData.stoneflies + bugData.most_caddisflies) / total * 100;
+        metric.score = parseInt(bugData.M + bugData.SF + bugData.MC) / total * 100;
 
         if (metric.score > 32.2) {
             metric.rating = 2;
@@ -37,7 +37,7 @@ function calculateMetrics(bugData){
     }
     //metric2: common_netspinners / total * 100
     function metricTwoCalc(metric) {
-        metric.score = parseInt(bugData.common_netspinners) / total * 100;
+        metric.score = parseInt(bugData.CN) / total * 100;
     
         if (metric.score < 19.7) {
             metric.rating = 2;
@@ -53,7 +53,7 @@ function calculateMetrics(bugData){
     }
     //metric3: lunged snails / total * 100
     function metricThreeCalc(metric) {
-        metric.score = parseInt(bugData.lunged_snails) / total * 100;
+        metric.score = parseInt(bugData.LS) / total * 100;
     
         if (metric.score < 0.3) {
             metric.rating = 2;
@@ -69,7 +69,7 @@ function calculateMetrics(bugData){
     }
     //metric4: beetles / total * 100
     function metricFourCalc(metric) {
-        metric.score = parseInt(bugData.beetles) / total * 100;
+        metric.score = parseInt(bugData.B) / total * 100;
     
         if (metric.score > 6.4) {
             metric.rating = 2;
@@ -85,7 +85,7 @@ function calculateMetrics(bugData){
     }
     //metric5 (tolerant): worms + flatworms + leeches + sowbugs + scuds + dragonflies + midges + blackflies + lungedsnails + clams / total * 100
     function metricFiveCalc(metric) {
-        metric.score = parseInt(bugData.worms + bugData.flatworms + bugData.leeches + bugData.sowbugs + bugData.scuds + bugData.dragonflies_damselflies + bugData.midges + bugData.blackflies + bugData.lunged_snails + bugData.clams) / total * 100;
+        metric.score = parseInt(bugData.W + bugData.F + bugData.L + bugData.SB + bugData.SC + bugData.DD + bugData.MI + bugData.BF + bugData.LS + bugData.CL) / total * 100;
     
         if (metric.score < 46.7) {
             metric.rating = 2;
@@ -101,7 +101,7 @@ function calculateMetrics(bugData){
     }
     //metric6 (non-insects): worms + flatworms + leeches + crayfish + sowbugs + scuds + gilled_snails + lunged_snails + clams / total * 100
     function metricSixCalc(metric) {
-        metric.score = parseInt(bugData.worms + bugData.flatworms + bugData.leeches + bugData.Crayfish + bugData.sowbugs + bugData.scuds + bugData.gilled_snails + bugData.lunged_snails + bugData.clams) / total * 100;
+        metric.score = parseInt(bugData.W + bugData.F + bugData.L + bugData.C+ bugData.SB + bugData.SC + bugData.GS + bugData.LS + bugData.CL) / total * 100;
     
         if (metric.score < 5.4) {
             metric.rating = 2;
@@ -130,6 +130,11 @@ function calculateMetrics(bugData){
 
         console.log(`Conditions: ${condition}`)
         //generate modal for this information (include stream name, condition score, and condition interpretation)
+
+        $("#condition-text").text(condition);
+        //Later, we can have a nice image here for the various index scores
+        // $("condition-image").src(conditionImg);
+        $('#conditionModal').modal('open');
     }
 
    metricOneCalc(metrics[0]);
