@@ -1,5 +1,5 @@
 //////BUG DATA TEST -- To use this, module.exports the function in metrics.js and uncomment out the crap at the bottom of dis page//////
-var metrics = require('./metrics.js');
+// var metrics = require('./metrics.js');
 
 $(document).ready(function(){
   $('.modal').modal();
@@ -23,7 +23,7 @@ $("#loginForm").on("submit", function(e) {
   console.log(test);
 
   //run the metrics stuff
-  metrics.calculateMetrics(test);
+  // metrics.calculateMetrics(test);
 
   //if login passes, we will serialize the bug data and run the metrics function (passing the bug object as an argument)
 });
@@ -78,4 +78,4 @@ $(".inc").on("click", function(e) {
 
 //testData function
 // metrics(bugData);
-console.log(bugData);
+// console.log(bugData);

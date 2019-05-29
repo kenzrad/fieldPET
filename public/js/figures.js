@@ -1,8 +1,12 @@
 var ctx = $('#chart-display');
 
-function testChart() {
+$("#test-chart-btn").on("click", function() {
+    testChart();
+    console.log("testing this chart shit")
+})
 
-    var myChart = new Chart(ctx, {
+function testChart() {
+    var chartDisplay = new Chart(ctx, {
         // The type of chart we want to create
         type: 'line',
 
@@ -20,9 +24,19 @@ function testChart() {
         // Configuration options go here
         options: {}
     });
+
+    $("#chart-title").text("Test Chart");
+    showChart();
 };
 
 function generateOneMetricChart() {
     var oneMetricChart = new Chart(ctx, {
+        type: 'line',
+        data: data,
+        options: options
     });
+}
+
+function showChart() {
+    $("#chartModal").modal('open');
 }
