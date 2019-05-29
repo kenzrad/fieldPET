@@ -102,10 +102,11 @@
 
 <div id="metricsTab" class="container">
   <p>Charts and Stuff Go Here.</p>
+  <button id="test-chart-btn">Test Chart</button>
 
 
   {{!-- Test div for us to view data in --}}
-  <canvas id="chart-display"></canvas>
+  
   {{!-- End test div --}}
 
 
@@ -132,3 +133,12 @@
     <h3 id="condition-text"></h3>
   </div>
 </div>
+
+{{!-- CHART MODAL --}}
+<div id="chartModal" class="modal">
+  <div class="modal-content">
+    <h1 id="chart-title"></h1>
+    <canvas id="chart-display"></canvas>
+  </div>
+</div>
+
