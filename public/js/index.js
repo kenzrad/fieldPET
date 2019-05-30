@@ -56,6 +56,9 @@ $("#loginForm").on("submit", function(e) {
     $.post("/api/Bugs", newBug);
   }
 
+  //run the metrics stuff
+  // metrics.calculateMetrics(test);
+
   //if login passes, we will serialize the bug data and run the metrics function (passing the bug object as an argument)
 });
 
@@ -109,4 +112,5 @@ $(".inc").on("click", function(e) {
 
 //testData function
 // metrics(bugData);
-console.log(bugData);
+
+// console.log(bugData);
