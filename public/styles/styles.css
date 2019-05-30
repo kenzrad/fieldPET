@@ -1,8 +1,37 @@
 /* 
+/ SCROLLBAR
+*/
+::-webkit-scrollbar {
+  width: 5px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #e1eff2;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #66a29e;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #528783; 
+}
+
+::-webkit-scrollbar-button {
+  width: 3px;
+}
+
+
+
+
+/* 
 /   ELEMENTS
 */
 body {
   background-color: #e1eff2;
+  padding: 10px;
 }
 
 input {
@@ -14,6 +43,9 @@ input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
+
+
+
 
 /* 
 /   CLASSES
@@ -75,6 +107,31 @@ input::-webkit-inner-spin-button {
   height: 50px;
 }
 
+.bugTabTop {
+  text-align: center;
+}
+
+.imageDiv {
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0 auto;
+}
+
+.image, .imageDiv {
+  width: 344px!important;
+  height: 132px!important;
+  padding: 5px;
+  border: 5px solid #657056;
+  border-radius: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+
+
+
 /* 
 /   IDS
 */
@@ -129,9 +186,13 @@ input::-webkit-inner-spin-button {
 
 #bugForm div:not(:last-child) {
   padding: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  text-align: center;
+}
+
+#bugForm h1 {
+  font-size: 50px;
+  font-variant: small-caps;
+  margin: 0px 0px 10px 0px;
 }
 
 #bugForm input {
@@ -154,6 +215,30 @@ input::-webkit-inner-spin-button {
   background-color: #95bfbc;
 } 
 
-#bugForm div:nth-child(odd) {
+#bugForm div:nth-child(odd):not(:last-child) {
   background-color: #66a29e;
+}
+
+#nav {
+  width: 251px;
+  border-right: 5px solid #657056;
+  padding-right: 10px;
+  text-align: right;
+}
+
+#nav h1, #nav ul {
+  display: inline;
+}
+
+#bugInfo {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #657056;
+  height: 200px;
+  width: 200px;
+  color: white;
+  padding: 10px;
+  border: 5px solid #424938;
+  border-radius: 15px;
 }
