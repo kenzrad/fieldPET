@@ -18,7 +18,7 @@ $("#submitBugs").on("click", function(e) {
 $("#loginForm").on("submit", function(e) {
   e.preventDefault();
 
-  var test = $("#loginForm").serializeArray();
+  var test = $("#bugForm").serializeArray();
 
   console.log(test);
 
