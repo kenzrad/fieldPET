@@ -22,6 +22,8 @@ $("#loginForm").on("submit", function(e) {
 
   console.log(test);
   console.log(test);
+  
+  //We will need to replace the site, date, and SiteID values; also we can probalby do a loop for this to simplify (but tis fine for now)
   var newBug = {
     site: "09-PL01-Col-DR20",
     date: "3/2/15",
