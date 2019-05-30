@@ -18,9 +18,43 @@ $("#submitBugs").on("click", function(e) {
 $("#loginForm").on("submit", function(e) {
   e.preventDefault();
 
-  var test = $("#loginForm").serializeArray();
+  var test = $("#bugForm").serializeArray();
 
   console.log(test);
+  console.log(test);
+  
+  //We will need to replace the site, date, and SiteID values; also we can probalby do a loop for this to simplify (but tis fine for now)
+  var newBug = {
+    site: "09-PL01-Col-DR20",
+    date: "3/2/15",
+    B: test[0].value,
+    BF: test[1].value,
+    C: test[2].value,
+    CL: test[3].value,
+    CN: test[4].value,
+    DD: test[5].value,
+    F: test[6].value,
+    GS: test[7].value,
+    HFA: test[8].value,
+    L: test[9].value,
+    LS: test[10].value,
+    M: test[11].value,
+    MC: test[12].value,
+    MTF: test[13].value,
+    OO: test[14].value,
+    SC: test[15].value,
+    SB: test[16].value,
+    SF: test[17].value,
+    W: test[18].value,
+    SiteId: 7
+  };
+  console.log(newBug);
+
+  submitBug(newBug);
+
+  function submitBug(newBug) {
+    $.post("/api/Bugs", newBug);
+  }
 
   //run the metrics stuff
   // metrics.calculateMetrics(test);
@@ -78,4 +112,5 @@ $(".inc").on("click", function(e) {
 
 //testData function
 // metrics(bugData);
+
 // console.log(bugData);
