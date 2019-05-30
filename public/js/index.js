@@ -1,7 +1,12 @@
 //////BUG DATA TEST -- To use this, module.exports the function in metrics.js and uncomment out the crap at the bottom of dis page//////
 // var metrics = require('./metrics.js');
 
-$(document).ready(function(){
+//
+//
+//  BUTTONS AND CLICKS
+//
+//
+$(document).ready(function () {
   $('.modal').modal();
   $('.tabs').tabs();
   $("#bugTabs").tabs({
@@ -9,13 +14,13 @@ $(document).ready(function(){
   });
 });
 
-$("#submitBugs").on("click", function(e) {
+$("#submitBugs").on("click", function (e) {
   e.preventDefault();
   $("#loginModal").modal('open');
 });
 
 
-$("#loginForm").on("submit", function(e) {
+$("#loginForm").on("submit", function (e) {
   e.preventDefault();
 
   var test = $("#bugForm").serializeArray();
@@ -62,17 +67,17 @@ $("#loginForm").on("submit", function(e) {
   //if login passes, we will serialize the bug data and run the metrics function (passing the bug object as an argument)
 });
 
-$(".dec").on("click", function(e) {
+$(".dec").on("click", function (e) {
   e.preventDefault();
   var val = $(this).next().val();
   if (val - 1 >= 0) {
     val--;
   }
-  
+
   $(this).next().val(val);
 });
 
-$(".inc").on("click", function(e) {
+$(".inc").on("click", function (e) {
   e.preventDefault();
   var val = $(this).prev().val();
   val++;
@@ -80,6 +85,45 @@ $(".inc").on("click", function(e) {
   $(this).prev().val(val);
 });
 
+$(".image").on("click", function () {
+  if ($("#bugInfo").hasClass("hidden")) {
+    var left = $(this).offset().left + parseInt($(this).css("width")) + 5;
+    var top = $(this).offset().top - 30;
+    $("#bugInfo").css({"left": left, "top": top});
+    $("#bugInfo").toggleClass("hidden");
+  } else {
+    $("#bugInfo").toggleClass("hidden");
+  }
+
+  var infoKey = $(this).data("name");
+  populateBugInfo(info[infoKey]);
+});
+
+$(document).on("click", function (e) {
+  if (!e.target.getAttribute("data-name")) {
+    if (!$("#bugInfo").hasClass("hidden")) {
+      $("#bugInfo").toggleClass("hidden");
+    }
+  }
+});
+
+//
+//
+//  FUNCTIONS
+//
+//
+function populateBugInfo(bugData) {
+  $("#bugInfo").empty();
+  var list = $("<ul>");
+
+  for (item of bugData) {
+    var listItem = $("<li>");
+    listItem.text(item);
+    list.append(listItem);
+  }
+
+  $("#bugInfo").append(list);
+}
 ////////BUG DATA TEST//////////
 //testData
 // var bugData = {
