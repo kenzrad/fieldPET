@@ -21,12 +21,15 @@ module.exports = function(app) {
 
     //finding SPECIFIC bug data (like mayflies)
     //?????? Do we need the include: db.Site?
-    app.get("/api/bugs/:bugType", function(req, res) {
+    app.get("/api/bugs/:type", function(req, res) {
         db.Bugs.findAll({
-            attributes: [req.params.bugType, "date"]
+            attributes: [req.params.type, "date"]
         }).then(function(dbBugs) {
           console.log(dbBugs);
           res.json(dbBugs);
+        })
+        .catch(function(err) {
+            res.json(err);
         });
     });
 

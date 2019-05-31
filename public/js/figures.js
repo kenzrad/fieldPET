@@ -13,7 +13,7 @@ $("#get-all-btn").on("click", function() {
 });
 
 $("#all-SF-btn").on("click", function() {
-    $.get("/api/Bugs/SF")
+    $.get("/api/bugs/SF")
     .then(function(stoneflyData){
         getSfData(stoneflyData);
     })
