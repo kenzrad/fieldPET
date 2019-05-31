@@ -26,7 +26,6 @@ $("#loginForm").on("submit", function (e) {
   var test = $("#bugForm").serializeArray();
 
   console.log(test);
-  console.log(test);
   
   //We will need to replace the site, date, and SiteID values; also we can probalby do a loop for this to simplify (but tis fine for now)
   var newBug = {
@@ -107,6 +106,12 @@ $(document).on("click", function (e) {
   }
 });
 
+$(window).resize(function () {
+  if (!$("#bugInfo").hasClass("hidden")) {
+    $("#bugInfo").toggleClass("hidden");
+  }
+});
+
 //
 //
 //  FUNCTIONS
@@ -122,6 +127,7 @@ function populateBugInfo(bugData) {
     list.append(listItem);
   }
 
+  $("#bugInfo").append('<h5 class="bugInfoTitle">Significant Details</h5>');
   $("#bugInfo").append(list);
 }
 ////////BUG DATA TEST//////////
