@@ -13,7 +13,11 @@ $("#get-all-btn").on("click", function() {
 });
 
 $("#all-SF-btn").on("click", function() {
-    getSfData();
+    $.get("/api/Bugs/SF")
+    .then(function(stoneflyData){
+        getSfData(stoneflyData);
+    })
+    
     console.log("Getting Stonefly Data")
 });
 
@@ -52,16 +56,28 @@ function testChart() {
     showChart();
 };
 
-function getSfData() {
+
+function getSfData(data) {
+var date = data.map(function(item){
+    return item.date;
+});
+date.sort();
+console.log(date)
+//console.log(data);
+
     var sfChart= new Chart(ctx, {
         type: 'line', 
         data: {
-            labels:['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+            labels: data.map(function(item){
+                return item.date;
+            }),
         datasets: [{
             label: 'Test',
             backgroundColor:'rgb(255, 99, 132)',
             borderColor: 'rgb(255, 99, 132)',
-            data: [0,1,2,3,4,5,6] 
+            data: data.map(function(item){
+                return item.SF;
+            })
         }]
     },
 options: {}
