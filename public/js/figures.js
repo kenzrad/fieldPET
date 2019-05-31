@@ -13,7 +13,7 @@ $("#get-all-btn").on("click", function() {
 });
 
 $("#all-SF-btn").on("click", function() {
-    $.get("/api/Bugs/SF")
+    $.get("/api/bugs/SF")
     .then(function(stoneflyData){
         getSfData(stoneflyData);
     })
@@ -61,16 +61,14 @@ function getSfData(data) {
 var date = data.map(function(item){
     return item.date;
 });
-date.sort();
-console.log(date)
-//console.log(data);
+var sfDate = date.sort();
+console.log(sfDate)
+
 
     var sfChart= new Chart(ctx, {
         type: 'line', 
         data: {
-            labels: data.map(function(item){
-                return item.date;
-            }),
+            labels: sfDate,
         datasets: [{
             label: 'Test',
             backgroundColor:'rgb(255, 99, 132)',

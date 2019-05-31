@@ -1,7 +1,7 @@
 var db = require('../models');
 
 module.exports = function(app) {
-    app.post("/api/Bugs", function(req, res) {
+    app.post("/api/bugs", function(req, res) {
         db.Bugs.create(req.body).then(function(dbBugs) {
             res.json(dbBugs);
         });
@@ -9,7 +9,7 @@ module.exports = function(app) {
 
     //finding ALL bug data
     //?????? Do we need the include: db.Site?
-    app.get("/api/Bugs", function(req, res) {
+    app.get("/api/bugs", function(req, res) {
         console.log('gjei');
         db.Bugs.findAll({ 
             include: [db.Site]
@@ -21,16 +21,19 @@ module.exports = function(app) {
 
     //finding SPECIFIC bug data (like mayflies)
     //?????? Do we need the include: db.Site?
-    app.get("/api/Bugs/:bugType", function(req, res) {
+    app.get("/api/bugs/:type", function(req, res) {
         db.Bugs.findAll({
-            attributes: [req.params.bugType, "date"]
+            attributes: [req.params.type, "date"]
         }).then(function(dbBugs) {
           console.log(dbBugs);
           res.json(dbBugs);
+        })
+        .catch(function(err) {
+            res.json(err);
         });
     });
 
-    app.delete("/api/Bugs/:id", function(req, res) {
+    app.delete("/api/bugs/:id", function(req, res) {
         db.Bugs.destroy({ where: { id: req.params.id } }).then(function(dbBugs) {
             res.json(dbBugs);
         });
