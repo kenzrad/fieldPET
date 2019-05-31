@@ -31,6 +31,7 @@ $("#loginForm").on("submit", function (e) {
   $.post('/api/login', login, function(res) {
     if (res) {
       console.log("yasssssss bitch");
+      $("#loginModal").modal('close');
       collectData();
     }
     else {

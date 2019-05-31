@@ -130,7 +130,7 @@ input::-webkit-inner-spin-button {
 }
 
 .warning-message {
-  font: darkred;
+  color: darkred;
 }
 
 
