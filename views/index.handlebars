@@ -1,10 +1,12 @@
 <header class="container">
   <div>
-    <h1>fieldPET</h1>
-    <ul class="tabs">
-      <li class="tab col s3"><a href="#dataEntryTab">Data Entry</a></li>
-      <li class="tab col s3"><a href="#metricsTab">Metrics</a></li>
-    </ul>
+    <div id="nav">
+      <h1>fieldPET</h1>
+      <ul class="tabs">
+        <li class="tab col s3"><a href="#dataEntryTab">Data Entry</a></li>
+        <li class="tab col s3"><a href="#metricsTab">Metrics</a></li>
+      </ul>
+    </div>
   </div>
 </header>
 
@@ -33,63 +35,88 @@
   </ul>
   <form id="bugForm">
     <div id="B" class="col s12">
+      <h1>Beetles</h1>
+      {{!-- Materialize has an issue with img on the first tab of slidable tabs,
+      which is why this is different. --}}
+      <div class="imageDiv image" data-name="B" style="background-image: url('./img/B.png')"></div>
       {{> bugInputs name="B"}}
     </div>
     <div id="BF" class="col s12">
+      <h1>Blackflies</h1>
+      <img class="image" src="./img/B.png" data-name="BF" alt="Blackfly Image">
       {{> bugInputs name="BF"}}
     </div>
     <div id="C" class="col s12">
+      <h1>Crayfish</h1>
       {{> bugInputs name="C"}}
     </div>
     <div id="CL" class="col s12">
+      <h1>Clams</h1>
       {{> bugInputs name="CL"}}
     </div>
     <div id="CN" class="col s12">
+      <h1>Common Netspinners</h1>
       {{> bugInputs name="CN"}}
     </div>
     <div id="DD" class="col s12">
+      <h1>Dragonflies and Damselflies</h1>
       {{> bugInputs name="DD"}}
     </div>
     <div id="F" class="col s12">
+      <h1>Flatworms</h1>
       {{> bugInputs name="F"}}
     </div>
     <div id="GS" class="col s12">
+      <h1>Gilled Snails</h1>
       {{> bugInputs name="GS"}}
     </div>
     <div id="HFA" class="col s12">
+      <h1>Hellgrammites, Fishflies, and Alderflies</h1>
       {{> bugInputs name="HFA"}}
     </div>
     <div id="L" class="col s12">
+      <h1>Leeches</h1>
       {{> bugInputs name="L"}}
     </div>
     <div id="M" class="col s12">
+      <h1>Mayflies</h1>
       {{> bugInputs name="M"}}
     </div>
     <div id="MC" class="col s12">
+      <h1>Most Caddisflies</h1>
       {{> bugInputs name="MC"}}
     </div>
     <div id="MTF" class="col s12">
+      <h1>Most True Flies</h1>
       {{> bugInputs name="MTF"}}
     </div>
     <div id="OO" class="col s12">
+      <h1>Other Organisms</h1>
       {{> bugInputs name="OO"}}
     </div>
     <div id="SB" class="col s12">
+      <h1>Sowbugs</h1>
       {{> bugInputs name="SB"}}
     </div>
     <div id="SC" class="col s12">
+      <h1>Scuds</h1>
       {{> bugInputs name="SC"}}
     </div>
     <div id="SF" class="col s12">
+      <h1>Stoneflies</h1>
       {{> bugInputs name="SF"}}
     </div>
     <div id="LS" class="col s12">
+      <h1>Lunged Snails</h1>
       {{> bugInputs name="LS"}}
     </div>
     <div id="W" class="col s12">
+      <h1>Worms</h1>
+      <img class="image" src="./img/W.png" data-name="W" alt="Worm Image">
       {{> bugInputs name="W"}}
     </div>
     <div id="MI" class="col s12">
+      <h1>Midges</h1>
       {{> bugInputs name="MI"}}
     </div>
 
@@ -127,8 +154,9 @@
     <h1>LOGIN</h1>
 
     <form id="loginForm">
-      <input type="text" name="Username" placeholder="Username">
-      <input type="password" name="Password" placeholder="Password">
+      <input type="text" name="username" placeholder="Username">
+      <input type="password" name="password" placeholder="Password">
+      <p id="message-text" class="warning-message"></p>
       <input type="submit" value="Submit">
     </form>
   </div>
@@ -151,3 +179,7 @@
   </div>
 </div>
 
+{{!-- FLOATING BUG INFO PANE --}}
+<div id="bugInfo" class="hidden">
+  <h1>test</h1>
+</div>
