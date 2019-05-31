@@ -22,7 +22,7 @@ $("#submitBugs").on("click", function (e) {
 
 $("#loginForm").on("submit", function (e) {
   e.preventDefault();
-
+  
   var login = {
     username: $("input[name=username]").val().trim(),
     password: $("input[name=password]").val().trim()

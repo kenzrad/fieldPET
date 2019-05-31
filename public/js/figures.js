@@ -13,7 +13,11 @@ $("#get-all-btn").on("click", function() {
 });
 
 $("#all-SF-btn").on("click", function() {
-    getSfData();
+    $.get("/api/Bugs/SF")
+    .then(function(stoneflyData){
+        getSfData(stoneflyData);
+    })
+    
     console.log("Getting Stonefly Data")
 });
 
@@ -53,13 +57,44 @@ function testChart() {
 };
 
 
+function getSfData(data) {
+var date = data.map(function(item){
+    return item.date;
+});
+date.sort();
+console.log(date)
+//console.log(data);
+
+    var sfChart= new Chart(ctx, {
+        type: 'line', 
+        data: {
+            labels: data.map(function(item){
+                return item.date;
+            }),
+        datasets: [{
+            label: 'Test',
+            backgroundColor:'rgb(255, 99, 132)',
+            borderColor: 'rgb(255, 99, 132)',
+            data: data.map(function(item){
+                return item.SF;
+            })
+        }]
+    },
+options: {}
+
+    });
+
+    $('#chart-title').text('Stone Fly Chart');
+    showChart();
+   
+    console.log("This function will show us all the stonefly data, either organized by site or over time with sites color coded, who knows");
+};
+
+
 function getAllData() {
     console.log("this will be a table or a json API root");
 };
 
-function getSfData() {
-    console.log("This function will show us all the stonefly data, either organized by site or over time with sites color coded, who knows");
-};
 
 function getLjCondition() {
     console.log("This function will show us the condition score of the james river over time -- this is a particularily complicated function, so we may change it quite a bit");
