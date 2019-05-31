@@ -156,6 +156,12 @@
     <form id="loginForm">
       <input type="text" name="username" placeholder="Username">
       <input type="password" name="password" placeholder="Password">
+      {{!-- we will need to format this date --}}
+      <input type="date" name="collection-date" placeholder="Select Collection Date">
+      <label>Browser Select</label>
+        <select id="options" class="browser-default">
+            <option value="" disabled selected>Select a Site</option>
+        </select>
       <p id="message-text" class="warning-message"></p>
       <input type="submit" value="Submit">
     </form>
