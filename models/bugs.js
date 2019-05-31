@@ -4,7 +4,6 @@ var Site = require("./site.js")
 
 module.exports = function(sequelize, DataTypes) {
   var Bugs = sequelize.define("Bugs", {
-    site: DataTypes.STRING,
     date: DataTypes.STRING,
     B: DataTypes.INTEGER,
     BF: DataTypes.INTEGER,
