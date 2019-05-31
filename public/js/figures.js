@@ -58,26 +58,30 @@ function testChart() {
 
 
 function getSfData(data) {
-var date = data.map(function(item){
-    return item.date;
-});
-var sfDate = date.sort();
-console.log(sfDate)
-
-
-    var sfChart= new Chart(ctx, {
-        type: 'line', 
-        data: {
-            labels: sfDate,
-        datasets: [{
-            label: 'Test',
-            backgroundColor:'rgb(255, 99, 132)',
-            borderColor: 'rgb(255, 99, 132)',
-            data: data.map(function(item){
-                return item.SF;
-            })
-        }]
-    },
+    var item = data.map(function(item){
+        return item;
+    });
+    
+    item.sort(function(a,b){
+        return new Date(a.date) - new Date(b.date);
+    });
+    
+        var sfChart= new Chart(ctx, {
+            type: 'line', 
+            data: {
+                labels: item.map(function(item){
+                    return item.date;
+                }),
+            datasets: [{
+                label: 'Stonefly Count',
+                backgroundColor:'rgb(255, 99, 132)',
+                borderColor: 'rgb(255, 99, 132)',
+                data: item.map(function(item){
+                    return item.SF;
+                })
+        
+            }]
+        },
 options: {}
 
     });
