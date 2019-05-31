@@ -78,7 +78,7 @@ function collectData() {
     submitBug(newBug);
 
     function submitBug(newBug) {
-      $.post("/api/Bugs", newBug);
+      $.post("/api/bugs", newBug);
     }
 
     //run the metrics stuff
