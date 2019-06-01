@@ -118,6 +118,7 @@ function calculateMetrics(bugData){
 
 
     function conditionAnalysis(score) {
+        console.log("score:" + score)
         if (score > 8) {
             condition = "Acceptable Ecological Condition";
         }

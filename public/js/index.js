@@ -24,8 +24,9 @@ $("#loginForm").on("submit", function (e) {
     username: $("input[name=username]").val().trim(),
     password: $("input[name=password]").val().trim(),
     fieldDate: $("input[name=fieldDate]").val(),
-    siteID: $("input[name=site]").val()
+    siteID: $("#site-options").val()
   }
+  console.log(`this is the id before passing ${login.siteID}`)
 
   $.post('/api/login', login, function(res) {
     if (res) {
@@ -92,7 +93,7 @@ $(window).resize(function () {
 //
 function collectData(date, id) {
   var bugData = $("#bugForm").serializeArray();
-
+  console.log(`this is the id you dummy ${id}`)
   //We will need to replace the site, date, and SiteID values; also we can probalby do a loop for this to simplify (but tis fine for now)
   var newBug = {
     date: date,
@@ -118,6 +119,7 @@ function collectData(date, id) {
     SiteId: id
   };
   console.log("Bug data collected");
+  console.log(JSON.stringify(newBug));
   submitBug(newBug);
 
   function submitBug(newBug) {
