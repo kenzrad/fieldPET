@@ -94,6 +94,25 @@ $(window).resize(function () {
 function collectData(date, id) {
   var bugData = $("#bugForm").serializeArray();
   console.log(`this is the id you dummy ${id}`)
+  bugData[0].value = bugData[0].value || 0
+  bugData[1].value = bugData[1].value || 0
+  bugData[2].value = bugData[2].value || 0
+  bugData[3].value = bugData[3].value || 0
+  bugData[4].value = bugData[4].value || 0
+  bugData[5].value = bugData[5].value || 0
+  bugData[6].value = bugData[6].value || 0
+  bugData[7].value = bugData[7].value || 0
+  bugData[8].value = bugData[8].value || 0
+  bugData[9].value = bugData[9].value || 0
+  bugData[10].value = bugData[10].value || 0
+  bugData[11].value = bugData[11].value || 0
+  bugData[12].value = bugData[12].value || 0
+  bugData[13].value = bugData[13].value || 0
+  bugData[14].value = bugData[14].value || 0
+  bugData[15].value = bugData[15].value || 0
+  bugData[16].value = bugData[16].value || 0
+  bugData[17].value = bugData[17].value || 0
+  bugData[18].value = bugData[18].value || 0
   //We will need to replace the site, date, and SiteID values; also we can probalby do a loop for this to simplify (but tis fine for now)
   var newBug = {
     date: date,
@@ -118,6 +137,7 @@ function collectData(date, id) {
     W: bugData[18].value,
     SiteId: id
   };
+  bugData[0].value = bugData[0].value || 0
   console.log("Bug data collected");
   console.log(JSON.stringify(newBug));
   submitBug(newBug);
