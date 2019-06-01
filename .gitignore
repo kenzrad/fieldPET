@@ -62,3 +62,5 @@ typings/
 
 # its a mac thing
 .DS_Store
+
+config.json

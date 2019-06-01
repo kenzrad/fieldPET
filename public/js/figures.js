@@ -8,8 +8,7 @@ $("#test-chart-btn").on("click", function() {
 });
 
 $("#get-all-btn").on("click", function() {
-    getAllData();
-    console.log("Getting all your data shit")
+    window.location = 'https://salty-savannah-46210.herokuapp.com/api/bugs'
 });
 
 $("#all-SF-btn").on("click", function() {
@@ -23,12 +22,18 @@ $("#all-SF-btn").on("click", function() {
 
 $("#lj-condition-btn").on("click", function() {
     getLjCondition();
-    console.log("Getting Stonefly Data")
+    
 });
 
-$("#lj-MF-btn").on("click", function() {
-    getLjMf();
-    console.log("Getting Stonefly Data")
+$("#lower-james-MF-btn").on("click", function() {
+    $.get('/api/bugs/M')
+    .then(function(mayData){
+        getLjMf(mayData);
+    })
+
+    $.get('/api/site/city_county')
+    console.log("Getting Mayfly Data");
+    
 });
 
 
@@ -66,7 +71,7 @@ function getSfData(data) {
         return new Date(a.date) - new Date(b.date);
     });
     
-        var sfChart= new Chart(ctx, {
+         new Chart(ctx, {
             type: 'line', 
             data: {
                 labels: item.map(function(item){
@@ -92,19 +97,18 @@ options: {}
     console.log("This function will show us all the stonefly data, either organized by site or over time with sites color coded, who knows");
 };
 
+function getLjMf(data) {
+    var item = data.map(function(item){
+        return item});
 
-function getAllData() {
-    console.log("this will be a table or a json API root");
+  
+    console.log("This function will show us the number of mayflies in the james river over time");
 };
-
 
 function getLjCondition() {
     console.log("This function will show us the condition score of the james river over time -- this is a particularily complicated function, so we may change it quite a bit");
 };
 
-function getLjMf() {
-    console.log("This function will show us the number of mayflies in the james river over time");
-};
 
 function showChart() {
     $("#chartModal").modal('open');
