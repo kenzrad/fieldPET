@@ -1,6 +1,6 @@
 var info = {
     B: [
-
+        ""
     ],
     BF: [
         "Have a bulbous posterior, like a bowling pin",

@@ -116,18 +116,14 @@ input::-webkit-inner-spin-button {
   text-align: center;
 }
 
-.imageDiv {
+.image{
+  width: 344px;
+  height: 142px;
+  border: 5px solid #657056;
+  border-radius: 10px;
   background-repeat: no-repeat;
   background-size: cover;
   margin: 0 auto;
-}
-
-.image, .imageDiv {
-  width: 344px!important;
-  height: 132px!important;
-  padding: 5px;
-  border: 5px solid #657056;
-  border-radius: 10px;
 }
 
 .hidden {
