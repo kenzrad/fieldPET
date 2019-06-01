@@ -29,9 +29,14 @@
 /* 
 /   ELEMENTS
 */
+html {
+  height: 100%;
+}
+
 body {
   background-color: #e1eff2;
-  padding: 10px;
+  padding: 10px 0px 0px 0px;
+  background-image: linear-gradient(to bottom, #e1eff2, #b7d5bb 80%, #80b387 99%);
 }
 
 input {
@@ -111,22 +116,24 @@ input::-webkit-inner-spin-button {
   text-align: center;
 }
 
-.imageDiv {
+.image{
+  width: 344px;
+  height: 142px;
+  border: 5px solid #657056;
+  border-radius: 10px;
   background-repeat: no-repeat;
   background-size: cover;
   margin: 0 auto;
 }
 
-.image, .imageDiv {
-  width: 344px!important;
-  height: 132px!important;
-  padding: 5px;
-  border: 5px solid #657056;
-  border-radius: 10px;
-}
-
 .hidden {
   display: none;
+}
+
+.bugInfoTitle {
+  margin-top: 0px;
+  font-variant: small-caps;
+  text-decoration: underline;
 }
 
 .warning-message {
@@ -238,11 +245,25 @@ input::-webkit-inner-spin-button {
   position: absolute;
   left: 0;
   top: 0;
-  background-color: #657056;
-  height: 200px;
-  width: 200px;
+  background-color: rgba(101,112,86,0.5);
+  height: 300px;
+  width: 300px;
   color: white;
   padding: 10px;
   border: 5px solid #424938;
   border-radius: 15px;
+}
+
+#bugInfo li {
+  list-style: circle inside;
+  font-size: 18px;
+}
+
+#bottomBorder {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 130px;
+  z-index: -1;
+  background-image: url("../img/bottom\ border.png");
 }

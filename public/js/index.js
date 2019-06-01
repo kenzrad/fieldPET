@@ -79,7 +79,11 @@ $(document).on("click", function (e) {
   }
 });
 
-
+$(window).resize(function () {
+  if (!$("#bugInfo").hasClass("hidden")) {
+    $("#bugInfo").toggleClass("hidden");
+  }
+});
 
 //
 //
@@ -137,6 +141,7 @@ function populateBugInfo(bugData) {
     list.append(listItem);
   }
 
+  $("#bugInfo").append('<h5 class="bugInfoTitle">Significant Details</h5>');
   $("#bugInfo").append(list);
 }
 
