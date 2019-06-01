@@ -108,6 +108,7 @@ function collectData(date, id) {
     $.post("/api/Bugs", newBug)
       .then(function(res) {
         console.log(`Submit bugs: ${res}`)
+        $("#bugForm").trigger("reset");
       })
   }
 
