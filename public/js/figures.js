@@ -60,7 +60,6 @@ function testChart() {
     showChart();
 };
 
-
 function getSfData(data) {
     var item = data.map(function(item){
         return item;
