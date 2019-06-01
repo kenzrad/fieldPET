@@ -140,6 +140,10 @@ input::-webkit-inner-spin-button {
   text-decoration: underline;
 }
 
+.warning-message {
+  color: darkred;
+}
+
 
 
 
