@@ -24,8 +24,9 @@ $("#loginForm").on("submit", function (e) {
     username: $("input[name=username]").val().trim(),
     password: $("input[name=password]").val().trim(),
     fieldDate: $("input[name=fieldDate]").val(),
-    siteID: $("input[name=site]").val()
+    siteID: $("#site-options").val()
   }
+  console.log(`this is the id before passing ${login.siteID}`)
 
   $.post('/api/login', login, function (res) {
     if (res) {
@@ -105,33 +106,16 @@ $(window).resize(function () {
 //
 function collectData(date, id) {
   var bugData = $("#bugForm").serializeArray();
+  var newBugs = { date: date, SiteId: id};
+  
+  for (pair of bugData) {
+    if (pair.value !== "") {
+      newBugs[pair.name] = pair.value;
+      console.log("collecting data for" + JSON.stringify(newBugs));
+    }
+  }
 
-  //We will need to replace the site, date, and SiteID values; also we can probalby do a loop for this to simplify (but tis fine for now)
-  var newBug = {
-    date: date,
-    B: bugData[0].value,
-    BF: bugData[1].value,
-    C: bugData[2].value,
-    CL: bugData[3].value,
-    CN: bugData[4].value,
-    DD: bugData[5].value,
-    F: bugData[6].value,
-    GS: bugData[7].value,
-    HFA: bugData[8].value,
-    L: bugData[9].value,
-    LS: bugData[10].value,
-    M: bugData[11].value,
-    MC: bugData[12].value,
-    MTF: bugData[13].value,
-    OO: bugData[14].value,
-    SC: bugData[15].value,
-    SB: bugData[16].value,
-    SF: bugData[17].value,
-    W: bugData[18].value,
-    SiteId: id
-  };
-  console.log("Bug data collected");
-  submitBug(newBug);
+  submitBug(newBugs);
 
   function submitBug(newBug) {
     $.post("/api/Bugs", newBug)

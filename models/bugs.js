@@ -5,26 +5,166 @@ var Site = require("./site.js")
 module.exports = function(sequelize, DataTypes) {
   var Bugs = sequelize.define("Bugs", {
     date: DataTypes.STRING,
-    B: DataTypes.INTEGER,
-    BF: DataTypes.INTEGER,
-    CL: DataTypes.INTEGER,
-    CN: DataTypes.INTEGER,
-    C: DataTypes.INTEGER,
-    DD: DataTypes.INTEGER,
-    F: DataTypes.INTEGER,
-    GS: DataTypes.INTEGER,
-    HFA: DataTypes.INTEGER,
-    L: DataTypes.INTEGER,
-    LS: DataTypes.INTEGER,
-    M: DataTypes.INTEGER,
-    MI: DataTypes.INTEGER,
-    MC: DataTypes.INTEGER,
-    MTF: DataTypes.INTEGER,
-    OO: DataTypes.INTEGER,
-    SC: DataTypes.INTEGER,
-    SB: DataTypes.INTEGER,
-    SF: DataTypes.INTEGER,
-    W: DataTypes.INTEGER
+    B: {
+      type: DataTypes.INTEGER,
+      defaultValue: 0,
+      validate: {
+        isNumeric: true,
+        isDecimal: false
+      }
+    },
+    BF: {
+      type: DataTypes.INTEGER,
+      defaultValue: 0,
+      validate: {
+        isNumeric: true,
+        isDecimal: false
+      }
+    },
+    CL: {
+      type: DataTypes.INTEGER,
+      defaultValue: 0,
+      validate: {
+        isNumeric: true,
+        isDecimal: false
+      }
+    },
+    CN: {
+      type: DataTypes.INTEGER,
+      defaultValue: 0,
+      validate: {
+        isNumeric: true,
+        isDecimal: false
+      }
+    },
+    C: {
+      type: DataTypes.INTEGER,
+      defaultValue: 0,
+      validate: {
+        isNumeric: true,
+        isDecimal: false
+      }
+    },
+    DD: {
+      type: DataTypes.INTEGER,
+      defaultValue: 0,
+      validate: {
+        isNumeric: true,
+        isDecimal: false
+      }
+    },
+    F: {
+      type: DataTypes.INTEGER,
+      defaultValue: 0,
+      validate: {
+        isNumeric: true,
+        isDecimal: false
+      }
+    },
+    GS: {
+      type: DataTypes.INTEGER,
+      defaultValue: 0,
+      validate: {
+        isNumeric: true,
+        isDecimal: false
+      }
+    },
+    HFA: {
+      type: DataTypes.INTEGER,
+      defaultValue: 0,
+      validate: {
+        isNumeric: true,
+        isDecimal: false
+      }
+    },
+    L: {
+      type: DataTypes.INTEGER,
+      defaultValue: 0,
+      validate: {
+        isNumeric: true,
+        isDecimal: false
+      }
+    },
+    LS: {
+      type: DataTypes.INTEGER,
+      defaultValue: 0,
+      validate: {
+        isNumeric: true,
+        isDecimal: false
+      }
+    },
+    M: {
+      type: DataTypes.INTEGER,
+      defaultValue: 0,
+      validate: {
+        isNumeric: true,
+        isDecimal: false
+      }
+    },
+    MI: {
+      type: DataTypes.INTEGER,
+      defaultValue: 0,
+      validate: {
+        isNumeric: true,
+        isDecimal: false
+      }
+    },
+    MC: {
+      type: DataTypes.INTEGER,
+      defaultValue: 0,
+      validate: {
+        isNumeric: true,
+        isDecimal: false
+      }
+    },
+    MTF: {
+      type: DataTypes.INTEGER,
+      defaultValue: 0,
+      validate: {
+        isNumeric: true,
+        isDecimal: false
+      }
+    },
+    OO: {
+      type: DataTypes.INTEGER,
+      defaultValue: 0,
+      validate: {
+        isNumeric: true,
+        isDecimal: false
+      }
+    },
+    SC: {
+      type: DataTypes.INTEGER,
+      defaultValue: 0,
+      validate: {
+        isNumeric: true,
+        isDecimal: false
+      }
+    },
+    SB: {
+      type: DataTypes.INTEGER,
+      defaultValue: 0,
+      validate: {
+        isNumeric: true,
+        isDecimal: false
+      }
+    },
+    SF: {
+      type: DataTypes.INTEGER,
+      defaultValue: 0,
+      validate: {
+        isNumeric: true,
+        isDecimal: false
+      }
+    },
+    W: {
+      type: DataTypes.INTEGER,
+      defaultValue: 0,
+      validate: {
+        isNumeric: true,
+        isDecimal: false
+      }
+    }
   });
 
   //Associating Bugs with a Site and linking the foreign key situation
