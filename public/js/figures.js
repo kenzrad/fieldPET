@@ -31,7 +31,6 @@ $("#lower-james-MF-btn").on("click", function() {
         getLjMf(mayData);
     })
 
-    $.get('/api/site/city_county')
     console.log("Getting Mayfly Data");
     
 });
@@ -98,9 +97,34 @@ options: {}
 };
 
 function getLjMf(data) {
-    var item = data.map(function(item){
-        return item});
+   var item = data.map(function(item){
+       return item;
+   });
+   item.sort(function(a,b){
+       return new Date(a.date) - new DataCue(b.date);
+   });
 
+   new Chart(ctx, {
+       type: 'line',
+       data: {
+           labels: item.map(function(item){
+               return item.date;
+           }),
+           datasets: [{
+               label: 'Mayfly Count',
+               backgroundColor:'rgb(255, 99, 132)',
+                borderColor: 'rgb(255, 99, 132)',
+                data: item.map(function(item){
+                    return item.M;
+                })
+
+           }]
+       },
+       options: {}
+   });
+   $('#chart-title').text('Mayfly Count');
+   showChart();
+   
   
     console.log("This function will show us the number of mayflies in the james river over time");
 };

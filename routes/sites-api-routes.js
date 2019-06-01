@@ -12,17 +12,17 @@ module.exports = function(app) {
     });
   });
 
-  app.get('/api/site/:city_county/', function(req, res) {
-    db.site.findAll({
-      attributes: [req.params.city_county, "date"]
-    }).then(function(dbSite) {
-      console.log(dbSite);
-      res.json(dbSite);
-    })
-    .catch(function(err){
-      res.json(err);
-    });
-  });
+  // app.get('/api/site/:location', function(req, res) {
+  //   db.site.findAll({
+  //     attributes: [req.params.location, "date"]
+  //   }).then(function(dbSite) {
+  //     console.log(dbSite);
+  //     res.json(dbSite);
+  //   })
+  //   .catch(function(err){
+  //     res.json(err);
+  //   });
+  // });
 };
 
 
