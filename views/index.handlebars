@@ -124,24 +124,32 @@
 </div>
 
 <div id="metricsTab" class="container">
-  <p>Charts and Stuff Go Here.</p>
+  <p>Raw data in JSON format</p>
 
-  {{!-- test chart modal --}}
+  {{!-- Get all and present either in table or JSON --}}
+  <button id="get-all-btn" class="chart-btn waves-effect waves-light btn">All Data</button>
+
+  <p>Bug counts by organism</p>
+
+  {{!-- Example:  Get all stonefly counts over time for all sites --}}
+  <button id="all-SF-btn" class="chart-btn waves-effect waves-light btn">Stoneflies</button>
+
+  <p>Aggregate bug counts by watershed</p>
+
+  {{!-- Example:  Get all midge counts over time for Difficult Run --}}
+  <button id="MI-x-Difficult-Run-btn" class="chart-btn waves-effect waves-light btn">Midges × Difficult Run</button>
+
+  <p>Computed metrics</p>
+
+  {{!-- Example:  Calculate condition matrix for the James River for every instance, and then graph it --}}
+  <button id="lower-james-condition-btn" class="chart-btn waves-effect waves-light btn">Condition:  Lower James</button>
+
+  <p>Test chart (development only)</p>
+
+  {{!-- Test chart modal --}}
+
   <button id="test-chart-btn" class="chart-btn waves-effect waves-light red  lighten-2 btn">Test Chart</button>
 
-  {{!-- get all and present either in table or JSON --}}
-  <button id="get-all-btn" class="chart-btn waves-effect waves-light btn">All Data</button>
-  
-  {{!-- get all stonefly data across time for all sites --}}
-  <button id="all-SF-btn" class="chart-btn waves-effect waves-light btn">Stonefy Counts</button>
-
-  <br>
-  {{!-- calculate condition matrix for the james river for every instance, and then graph it --}}
-  <button id="lower-james-condition-btn" class="chart-btn waves-effect waves-light btn">Lower James Condition</button>
-
-  {{!-- get all mayfly data for james river across time --}}  
-  <button id="lower-james-MF-btn" class="chart-btn waves-effect waves-light btn">Lower James Mayflies</button>
-  
 </div>
 
 {{!-- LOGIN MODAL --}}
