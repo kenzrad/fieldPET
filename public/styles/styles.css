@@ -49,6 +49,13 @@ input::-webkit-inner-spin-button {
     margin: 0;
 }
 
+h5 {
+  margin-bottom: 0px;
+  font-variant: small-caps;
+  color: black;
+  font-weight: 600;
+}
+
 
 
 
@@ -132,12 +139,15 @@ input::-webkit-inner-spin-button {
 
 .bugInfoTitle {
   margin-top: 0px;
-  font-variant: small-caps;
   text-decoration: underline;
 }
 
 .warning-message {
   color: darkred;
+}
+
+.circle {
+  list-style: circle inside!important;
 }
 
 
@@ -147,6 +157,7 @@ input::-webkit-inner-spin-button {
 /   IDS
 */
 #dataEntryTab, #metricsTab {
+  box-shadow: 10px 10px 10px #657056;
   margin-top: 20px;
   padding: 20px;
   min-height: 400px;
@@ -252,10 +263,11 @@ input::-webkit-inner-spin-button {
   padding: 10px;
   border: 5px solid #424938;
   border-radius: 15px;
+  overflow-y: auto;
 }
 
 #bugInfo li {
-  list-style: circle inside;
+  /* list-style: circle inside; */
   font-size: 18px;
 }
 
