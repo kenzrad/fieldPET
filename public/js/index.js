@@ -93,34 +93,16 @@ $(window).resize(function () {
 //
 function collectData(date, id) {
   var bugData = $("#bugForm").serializeArray();
-  console.log(`this is the id you dummy ${id}`)
-  //We will need to replace the site, date, and SiteID values; also we can probalby do a loop for this to simplify (but tis fine for now)
-  var newBug = {
-    date: date,
-    B: bugData[0].value,
-    BF: bugData[1].value,
-    C: bugData[2].value,
-    CL: bugData[3].value,
-    CN: bugData[4].value,
-    DD: bugData[5].value,
-    F: bugData[6].value,
-    GS: bugData[7].value,
-    HFA: bugData[8].value,
-    L: bugData[9].value,
-    LS: bugData[10].value,
-    M: bugData[11].value,
-    MC: bugData[12].value,
-    MTF: bugData[13].value,
-    OO: bugData[14].value,
-    SC: bugData[15].value,
-    SB: bugData[16].value,
-    SF: bugData[17].value,
-    W: bugData[18].value,
-    SiteId: id
-  };
-  console.log("Bug data collected");
-  console.log(JSON.stringify(newBug));
-  submitBug(newBug);
+  var newBugs = { date: date, SiteId: id};
+  
+  for (pair of bugData) {
+    if (pair.value !== "") {
+      newBugs[pair.name] = pair.value;
+      console.log("collecting data for" + JSON.stringify(newBugs));
+    }
+  }
+
+  submitBug(newBugs);
 
   function submitBug(newBug) {
     $.post("/api/Bugs", newBug)
