@@ -1,12 +1,10 @@
 <header class="container">
-  <div>
-    <div id="nav">
-      <h1>fieldPET</h1>
-      <ul class="tabs">
-        <li class="tab col s3"><a href="#dataEntryTab">Data Entry</a></li>
-        <li class="tab col s3"><a href="#metricsTab">Metrics</a></li>
-      </ul>
-    </div>
+  <div id="nav">
+    <h1>fieldPET</h1>
+    <ul class="tabs">
+      <li class="tab col s3"><a href="#dataEntryTab">Data Entry</a></li>
+      <li class="tab col s3"><a href="#metricsTab">Metrics</a></li>
+    </ul>
   </div>
 </header>
 
@@ -88,7 +86,7 @@
     </div>
     <div id="OO" class="col s12">
       <h1>Other Organisms</h1>
-      {{> bugInputs name="OO"}}
+      {{> bugInputs noImage="OO"}}
     </div>
     <div id="SB" class="col s12">
       <h1>Sowbugs</h1>
@@ -108,7 +106,6 @@
     </div>
     <div id="W" class="col s12">
       <h1>Worms</h1>
-      <img class="image" src="./img/bugs/W.png" data-name="W" alt="Worm Image">
       {{> bugInputs name="W"}}
     </div>
     <div id="MI" class="col s12">
@@ -131,7 +128,7 @@
 
   {{!-- get all and present either in table or JSON --}}
   <button id="get-all-btn" class="chart-btn waves-effect waves-light btn">All Data</button>
-  
+
   {{!-- get all stonefly data across time for all sites --}}
   <button id="all-SF-btn" class="chart-btn waves-effect waves-light btn">Stonefy Counts</button>
 
@@ -139,9 +136,9 @@
   {{!-- calculate condition matrix for the james river for every instance, and then graph it --}}
   <button id="lower-james-condition-btn" class="chart-btn waves-effect waves-light btn">Lower James Condition</button>
 
-  {{!-- get all mayfly data for james river across time --}}  
+  {{!-- get all mayfly data for james river across time --}}
   <button id="lower-james-MF-btn" class="chart-btn waves-effect waves-light btn">Lower James Mayflies</button>
-  
+
 </div>
 
 {{!-- LOGIN MODAL --}}
@@ -155,9 +152,9 @@
       {{!-- we will need to format this date --}}
       <input type="date" name="fieldDate" placeholder="Select Collection Date">
       <label>Browser Select</label>
-        <select id="site-options" name="site" class="browser-default">
-            <option value="" disabled selected>Select a Site</option>
-        </select>
+      <select id="site-options" name="site" class="browser-default">
+        <option value="" disabled selected>Select a Site</option>
+      </select>
       <p id="message-text" class="warning-message"></p>
       <input type="submit" value="Submit">
     </form>
