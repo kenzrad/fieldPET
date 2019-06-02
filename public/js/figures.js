@@ -21,10 +21,10 @@ $("#site-condition-btn").on("click", function() {
     
 });
 
-$("#lower-james-MF-btn").on("click", function() {
-    $.get('/api/bugs/M')
-    .then(function(mayData){
-        getLjMf(mayData);
+$("#join-table-btn").on("click", function() {
+    $.get('/api/site/Fairfax County/M')
+    .then(function(queryData){
+        console.log(queryData);
     })
 
     console.log("Getting Mayfly Data");

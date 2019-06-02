@@ -9,17 +9,28 @@ module.exports = function(app) {
     });
   });
 
-  // app.get('/api/site/:location', function(req, res) {
-  //   db.site.findAll({
-  //     attributes: [req.params.location, "date"]
-  //   }).then(function(dbSite) {
-  //     console.log(dbSite);
-  //     res.json(dbSite);
-  //   })
-  //   .catch(function(err){
-  //     res.json(err);
-  //   });
-  // });
+  //find all given bug data for a give site
+  app.get("/api/site/:location/:bug", function(req, res) {
+    console.log("in the api call"
+    )
+    var location = req.params.location;
+    var bug = req.params.bug;
+
+    db.Site.findAll({
+      attributes: ["id", "site"],
+      where: {
+        city_county: location
+      },
+      include: [
+        {
+          model: db.Bugs,
+          attributes: [bug, "date", "SiteId"]
+        }
+      ]
+    }).then(function(dbSiteBug) {
+      res.json(dbSiteBug);
+    });
+  });
 };
 
 
