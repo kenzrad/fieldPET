@@ -25,8 +25,7 @@ $("#loginForm").on("submit", function (e) {
     password: $("input[name=password]").val().trim(),
     fieldDate: $("input[name=fieldDate]").val(),
     siteID: $("#site-options").val()
-  }
-  console.log(`this is the id before passing ${login.siteID}`)
+  };
 
   $.post('/api/login', login, function (res) {
     if (res) {
@@ -111,7 +110,7 @@ function collectData(date, id) {
   for (pair of bugData) {
     if (pair.value !== "") {
       newBugs[pair.name] = pair.value;
-      console.log("collecting data for" + JSON.stringify(newBugs));
+      console.log("collecting data for new bugs");
     }
   }
 
@@ -120,7 +119,7 @@ function collectData(date, id) {
   function submitBug(newBug) {
     $.post("/api/Bugs", newBug)
       .then(function (res) {
-        console.log(`Submit bugs: ${res}`)
+        console.log(`Submiting bug data`)
         $("#bugForm").trigger("reset");
       })
   }
