@@ -13,11 +13,11 @@ Full-stack field notes app for entering and visualizing stream water quality dat
 * Certain groups of bugs, like stoneflys, are very sensitive to ecological disturbance (such as pollution)
 
 
-  ![Stonefly] (https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/stonefly-larva-nymph-plecoptera-perla-marginata-steinflue-urft-valley-art.jpg)
+  ![Stonefly](https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/stonefly-larva-nymph-plecoptera-perla-marginata-steinflue-urft-valley-art.jpg)
 
 * Other groups of bugs are less sensitive (like midges). These bugs tend to indicate poor water quality when their numbers proportionally outweigh other less-tolerant species
 
-  ![Midges] (https://www.ohio-forum.com/wp-content/uploads/2018/08/Bloodworm.jpg)
+  ![Midges](https://www.ohio-forum.com/wp-content/uploads/2018/08/Bloodworm.jpg)
 
 * Benthic Macroinvertebrate Water Quality Monitoring is conducted by in large-part by volunteers, but also by  government employees, indsutry-professionals, and academics across the State of Virginia
 
