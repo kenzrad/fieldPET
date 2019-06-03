@@ -79,6 +79,10 @@ h5 {
   background-color: #657056;
 }
 
+#navTabs .indicator {
+  display: none;
+}
+
 .tabs .tab a:focus, .tabs .tab a:focus.active {
   background-color: rgba(101,112,86, 0.2);
 }
