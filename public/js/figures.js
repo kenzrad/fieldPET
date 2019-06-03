@@ -1,23 +1,11 @@
 var ctx = $('#chart-display');
 
-
-//For now, we have temporary buttons to run various functions. Later we should allow more flexibility with drop-down menus and other options so the user can decide what to do (but this will be a quick way to get this going)
-
-$("#get-all-btn").on("click", function() {
-    window.location = 'https://salty-savannah-46210.herokuapp.com/api/bugs'
-});
-
 $("#bug-counts-btn").on("click", function() {
     $.get("/api/bugs/SF")
     .then(function(allBugData){
         lineChart(allBugData);
     })
     console.log("Getting Stonefly Data")
-});
-
-$("#site-condition-btn").on("click", function() {
-    getSiteCondition();
-    
 });
 
 $("#join-table-btn").on("click", function() {
@@ -78,7 +66,7 @@ function lineChart(data) {
         options: {}
     });
 
-    $('#chart-title').text('Bug Count');
+    $('#chart-title').text('Bug Counts Over Time');
     showChart();
    
 };
@@ -96,15 +84,8 @@ function scatterPlotChart(data, labels) {
             }]
         }
     });
-   $('#chart-title').text('Mayfly Count');
+   $('#chart-title').text('Bug Counts By Site');
    showChart();
-   
-  
-//     console.log("This function will show us the number of mayflies in the james river over time");
-};
-
-function getSiteCondition() {
-    console.log("This function will show us the condition score of the james river over time -- this is a particularily complicated function, so we may change it quite a bit");
 };
 
 
