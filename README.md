@@ -49,6 +49,7 @@ User experience:
 
 
 ##  Walk-Through
+
 FieldPET is a bug counting app that collects data of specific bugs in specific locations. This allows metrics contained within the app to determine water quality. 
 
 Upon first entering the website a site volunteer with given credentials will input the quantity on each of the specific bugs.
@@ -65,16 +66,16 @@ Finally FieldPET will return with water quality information
 
 A user can also view graphs of information created by data used from the database. 
 
-<img width=“941” alt=“Screen Shot 2019-06-03 at 6 31 26 PM” src=“https://user-images.githubusercontent.com/46430768/58838848-e11dfd00-862d-11e9-87b9-eab0858cc26e.png”
+<img width=“941” alt=“Screen Shot 2019-06-03 at 6 31 26 PM” src=“https://user-images.githubusercontent.com/46430768/58838848-e11dfd00-862d-11e9-87b9-eab0858cc26e.png”>
 
 <img width=“929" alt=“Screen Shot 2019-06-03 at 6 32 40 PM” src=“https://user-images.githubusercontent.com/46430768/58838896-0448ac80-862e-11e9-9c87-99574cacf38a.png”>
 
 
 ## Acknowledgements and Contributions
 
-Thank you to the Izaak Walton and VASOS league for use of their datasheets.
+Thank you to the Izaak Walton and VASOS league for data and resources
 
-Kensey Barker (https://github.com/kenzrad) - Metrics, Data Seeding, Graphing
-Thomas Smith (https://github.com/slowpossum)- Front end, design
-Molly Levine(https://github.com/levinemr2) - API calls, Graphing, 
-Austin Kim (https://github.com/powerpcg5)- Converted CSV to Unix friendly newlines
+Kensey Barker (https://github.com/kenzrad) - Back end framework, Data and charts integration, Metrics and Analysis
+Thomas Smith (https://github.com/slowpossum)- Front end development and design
+Molly Levine(https://github.com/levinemr2) - API calls, Charts integration
+Austin Kim (https://github.com/powerpcg5)- Converted CSV to Unix friendly newlines, Research
