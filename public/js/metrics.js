@@ -4,13 +4,21 @@ function calculateMetrics(bugData){
     var total = 0;
     var indexScore = 0;
     var condition = "";
+    var newBugs = {};
 
-    for(var key in bugData) {
-        total += parseInt(bugData[key]);
-    }
+    for (pair of bugData) {
+        if (pair.value !== "") {
+          newBugs[pair.name] = pair.value;
+          total += parseInt(pair.value);
+        }
+        else {
+            newBugs[pair.name] = 0;
+        }
+      }
 
     // creating metrics object (6 metrics)
     var metrics = [];
+
     for (i = 0; i < 6; i ++) {
         metrics[i] = {
             metric: parseInt(i + 1),
@@ -21,7 +29,7 @@ function calculateMetrics(bugData){
 
     //metric1: mayflies + stoneflies + most_caddiflies / total * 100
     function metricOneCalc(metric) {
-        metric.score = parseInt(bugData.M + bugData.SF + bugData.MC) / total * 100;
+        metric.score = (parseInt(newBugs.M) + parseInt(newBugs.SF) + parseInt(newBugs.MC)) /total * 100;
 
         if (metric.score > 32.2) {
             metric.rating = 2;
@@ -37,7 +45,7 @@ function calculateMetrics(bugData){
     }
     //metric2: common_netspinners / total * 100
     function metricTwoCalc(metric) {
-        metric.score = parseInt(bugData.CN) / total * 100;
+        metric.score = parseInt(newBugs.CN) / total * 100;
     
         if (metric.score < 19.7) {
             metric.rating = 2;
@@ -53,7 +61,7 @@ function calculateMetrics(bugData){
     }
     //metric3: lunged snails / total * 100
     function metricThreeCalc(metric) {
-        metric.score = parseInt(bugData.LS) / total * 100;
+        metric.score = parseInt(newBugs.LS) / total * 100;
     
         if (metric.score < 0.3) {
             metric.rating = 2;
@@ -69,7 +77,7 @@ function calculateMetrics(bugData){
     }
     //metric4: beetles / total * 100
     function metricFourCalc(metric) {
-        metric.score = parseInt(bugData.B) / total * 100;
+        metric.score = parseInt(newBugs.B) / total * 100;
     
         if (metric.score > 6.4) {
             metric.rating = 2;
@@ -82,10 +90,11 @@ function calculateMetrics(bugData){
             metric.rating = 1;
             indexScore ++;
         };
+        console.log(`metric 4 score is:${metric.score}`)
     }
     //metric5 (tolerant): worms + flatworms + leeches + sowbugs + scuds + dragonflies + midges + blackflies + lungedsnails + clams / total * 100
     function metricFiveCalc(metric) {
-        metric.score = parseInt(bugData.W + bugData.F + bugData.L + bugData.SB + bugData.SC + bugData.DD + bugData.MI + bugData.BF + bugData.LS + bugData.CL) / total * 100;
+        metric.score = (parseInt(newBugs.W) + parseInt(newBugs.F) + parseInt(newBugs.L) + parseInt(newBugs.SB) + parseInt(newBugs.SC) + parseInt(newBugs.DD) + parseInt(newBugs.MI) + parseInt(newBugs.BF) + parseInt(newBugs.LS) + parseInt(newBugs.CL)) / total * 100;
     
         if (metric.score < 46.7) {
             metric.rating = 2;
@@ -101,8 +110,8 @@ function calculateMetrics(bugData){
     }
     //metric6 (non-insects): worms + flatworms + leeches + crayfish + sowbugs + scuds + gilled_snails + lunged_snails + clams / total * 100
     function metricSixCalc(metric) {
-        metric.score = parseInt(bugData.W + bugData.F + bugData.L + bugData.C+ bugData.SB + bugData.SC + bugData.GS + bugData.LS + bugData.CL) / total * 100;
-    
+        metric.score = ((parseInt(newBugs.W) + parseInt(newBugs.F) + parseInt(newBugs.L) + parseInt(newBugs.C) + parseInt(newBugs.SB) + parseInt(newBugs.SC) + parseInt(newBugs.GS) + parseInt(newBugs.LS) + parseInt(newBugs.CL))) / total * 100;
+
         if (metric.score < 5.4) {
             metric.rating = 2;
             indexScore += 2;
