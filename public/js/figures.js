@@ -3,9 +3,9 @@ var ctx = $('#chart-display');
 
 //For now, we have temporary buttons to run various functions. Later we should allow more flexibility with drop-down menus and other options so the user can decide what to do (but this will be a quick way to get this going)
 
-$("#get-all-btn").on("click", function() {
-    window.location = 'https://salty-savannah-46210.herokuapp.com/api/bugs'
-});
+// $("#get-all-btn").on("click", function() {
+//     window.location = 'https://salty-savannah-46210.herokuapp.com/api/bugs'
+// });
 
 $("#bug-counts-btn").on("click", function() {
     $.get("/api/bugs/SF")

@@ -169,7 +169,7 @@ h5 {
   background-color: white;
 }
 
-#loginModal, #conditionModal, #chartModal, #creditsModal {
+#loginModal, #conditionModal, #creditsModal {
   background-color: #657056;
   width: 500px;
   border-radius: 10px;
@@ -187,6 +187,9 @@ h5 {
 #chartModal {
   background-color: #acb5a0;
   color: white;
+  width: 800px;
+  border-radius: 10px;
+  text-align: center;
 }
 
 #chartModal canvas {
