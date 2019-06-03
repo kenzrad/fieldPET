@@ -8,13 +8,10 @@ module.exports = function(app) {
     });
 
     //finding ALL bug data
-    //?????? Do we need the include: db.Site?
     app.get("/api/bugs", function(req, res) {
-        console.log('gjei');
         db.Bugs.findAll({ 
             include: [db.Site]
         }).then(function(dbBugs) {
-          console.log(dbBugs);
           res.json(dbBugs);
         });
     });
