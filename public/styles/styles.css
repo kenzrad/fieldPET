@@ -169,7 +169,7 @@ h5 {
   background-color: white;
 }
 
-#loginModal {
+#loginModal, #conditionModal, #chartModal {
   background-color: #657056;
   width: 500px;
   border-radius: 10px;
@@ -180,8 +180,18 @@ h5 {
   color: black;
 }
 
-#loginModal h1 {
+#loginModal h1, #conditionModal h1 {
   color: white;
+}
+
+#chartModal {
+  background-color: #acb5a0;
+  color: white;
+}
+
+#chartModal canvas{
+  background-color: rgba(255,255,255,0.5);
+  border-radius: 5px;
 }
 
 #submitBugs {
