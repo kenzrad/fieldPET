@@ -121,25 +121,21 @@
 </div>
 
 <div id="metricsTab" class="container">
-  <p>Raw data (JSON format)</p>
-
-  {{!-- Get all and present either in table or JSON --}}
-  <button id="get-all-btn" class="chart-btn waves-effect waves-light btn">Bug Data API</button>
-
-  <p>Bug counts by organism</p>
-
-  {{!-- Example:  Get all stonefly counts over time for all sites --}}
-  <button id="all-SF-btn" class="chart-btn waves-effect waves-light btn">Stoneflies</button>
-
-  <p>Aggregate bug counts by watershed</p>
-
-  {{!-- Example:  Get all midge counts over time for Difficult Run --}}
-  <button id="join-table-btn" class="chart-btn waves-effect waves-light btn">Midges × Difficult Run</button>
-
-  <p>Computed metrics</p>
-
-  {{!-- Example:  Calculate condition matrix for the James River for every instance, and then graph it --}}
-  <button id="site-condition-btn" class="chart-btn waves-effect waves-light btn">Site Condtion</button>
+  <div class="row">
+    <div class="col s6 center-align">
+      <a id="bug-counts-btn" class="figure-btn"><img src="./img/figures/lineChart.png"></a>
+    </div>
+    <div class="col s6 center-align">
+      <a id="join-table-btn" class="figure-btn"><img src="./img/figures/scatterPlot.png"></a>
+    </div>
+  </div>
+  <div class="row b">
+    <div class="col s12">
+      <a href="https://salty-savannah-46210.herokuapp.com/api/bugs" target="_blank">Bug Data API</a>
+      <a class="disabled" href="#!">|</a>
+      <a href="https://salty-savannah-46210.herokuapp.com/api/site" target="_blank">Site Data API</a>
+    </div>
+  </div>
 
 </div>
 

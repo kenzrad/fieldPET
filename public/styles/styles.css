@@ -113,10 +113,8 @@ h5 {
 }
 
 /*You can do whatever you want with this, I'm not super familiar w/ materialize*/
-.chart-btn  {
-  margin: 1%;
-  width: 250px;
-  height: 50px;
+.figure-btn  {
+  cursor: pointer;
 }
 
 .bugTabTop {
