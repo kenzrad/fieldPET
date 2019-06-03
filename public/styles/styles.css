@@ -29,12 +29,12 @@
 /* 
 /   ELEMENTS
 */
-html {
+html, body {
   height: 100%;
 }
 
 body {
-  background-color: #e1eff2;
+  min-height: 100%;
   padding: 10px 0px 0px 0px;
   background-image: linear-gradient(to bottom, #e1eff2, #b7d5bb 80%, #80b387 99%);
 }
@@ -169,7 +169,7 @@ h5 {
   background-color: white;
 }
 
-#loginModal {
+#loginModal, #conditionModal, #chartModal, #creditsModal {
   background-color: #657056;
   width: 500px;
   border-radius: 10px;
@@ -180,7 +180,21 @@ h5 {
   color: black;
 }
 
-#loginModal h1 {
+#loginModal h1, #conditionModal h1 {
+  color: white;
+}
+
+#chartModal {
+  background-color: #acb5a0;
+  color: white;
+}
+
+#chartModal canvas {
+  background-color: rgba(255,255,255,0.5);
+  border-radius: 5px;
+}
+
+#creditsModal {
   color: white;
 }
 
@@ -275,5 +289,5 @@ h5 {
   width: 100%;
   height: 130px;
   z-index: -1;
-  background-image: url("../img/bottom\ border.png");
+  background-image: url("../img/bottomBorder.png");
 }

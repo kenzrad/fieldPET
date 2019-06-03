@@ -98,6 +98,11 @@ $(window).resize(function () {
   }
 });
 
+$("#creditsLink").on("click", function (e) {
+  e.preventDefault();
+  $("#creditsModal").modal("open");
+});
+
 //
 //
 //  FUNCTIONS

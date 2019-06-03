@@ -2,8 +2,8 @@
   <div id="nav">
     <h1>fieldPET</h1>
     <ul class="tabs">
-      <li class="tab col s3"><a href="#dataEntryTab">Data Entry</a></li>
-      <li class="tab col s3"><a href="#metricsTab">Metrics</a></li>
+      <li class="tab"><a href="#dataEntryTab">Data Entry</a></li>
+      <li class="tab"><a href="#metricsTab">Metrics</a></li>
     </ul>
   </div>
 </header>
@@ -129,11 +129,13 @@
       <a id="join-table-btn" class="figure-btn"><img src="./img/figures/scatterPlot.png"></a>
     </div>
   </div>
-  <div class="row b">
+  <div class="row b center-align">
     <div class="col s12">
       <a href="https://salty-savannah-46210.herokuapp.com/api/bugs" target="_blank">Bug Data API</a>
       <a class="disabled" href="#!">|</a>
       <a href="https://salty-savannah-46210.herokuapp.com/api/site" target="_blank">Site Data API</a>
+      <a class="disabled" href="#!">|</a>
+      <a id="creditsLink" href="#" target="_blank">Credits</a>
     </div>
   </div>
 
@@ -173,6 +175,19 @@
   <div class="modal-content">
     <h1 id="chart-title"></h1>
     <canvas id="chart-display"></canvas>
+  </div>
+</div>
+
+{{!-- CREDITS MODAL --}}
+<div id="creditsModal" class="modal">
+  <div class="modal-content">
+    <h4>Credits:</h4>
+    <p><b>Data Processing, Analysis, and Metrics:</b> Kensey Barker (<a href="https://github.com/kenzrad" target="_blank">@kenzrad</a>)</p>
+    <p><b>Visualization, Integration:</b> Austin Kim (<a href="https://github.com/powerpcg5" target="_blank">@powerpcg5</a>)</p>
+    <p><b>Database, Data Integration:</b> Molly Levine (<a href="https://github.com/levinemr2" target="_blank">@levinemr2</a>)</p>
+    <p><b>Front End Design:</b> Thomas Smith (<a href="https://github.com/Slowpossum" target="_blank">@Slowpossum</a>)</p>
+    <br>
+    <p>The invaluable information and pictures of <a href="https://www.iwla.org/" target="_blank">The Izaac Walton League of America</a></p>
   </div>
 </div>
 
