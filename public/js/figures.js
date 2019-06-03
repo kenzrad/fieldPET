@@ -7,10 +7,10 @@ $("#get-all-btn").on("click", function() {
     window.location = 'https://salty-savannah-46210.herokuapp.com/api/bugs'
 });
 
-$("#all-SF-btn").on("click", function() {
+$("#bug-counts-btn").on("click", function() {
     $.get("/api/bugs/SF")
-    .then(function(stoneflyData){
-        lineChart(stoneflyData);
+    .then(function(allBugData){
+        lineChart(allBugData);
     })
     console.log("Getting Stonefly Data")
 });
