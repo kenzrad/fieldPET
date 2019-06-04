@@ -54,28 +54,33 @@ FieldPET is a bug counting app that collects data of specific bugs in specific l
 
 Upon first entering the website a site volunteer with given credentials will input the quantity on each of the specific bugs.
 
-<img width=“1433” alt=“Screen Shot 2019-06-03 at 6 27 08 PM” src=“https://user-images.githubusercontent.com/46430768/58838628-3c032480-862d-11e9-8a8a-9d44f938b2bf.png“>
+![Opening Page](public/img/readMe/opening.png "Opening Page")
 
 Next the user will hit submit and enter their credentials and the date the count was collected. 
 
-<img width=“1147” alt=“Screen Shot 2019-06-03 at 6 28 49 PM” src=“https://user-images.githubusercontent.com/46430768/58838713-7b317580-862d-11e9-82ba-f9efcb7e9724.png”>
+![Login Page](public/img/readMe/login.png "Login Page")
+
 
 Finally FieldPET will return with water quality information
 
-<img width=“1147" alt=“Screen Shot 2019-06-03 at 6 28 49 PM” src=“https://user-images.githubusercontent.com/46430768/58838768-a4ea9c80-862d-11e9-8f05-68ee3ff32464.png”>
+![Water Quality](public/img/readMe/waterQuality.png "Water Quality")
 
 A user can also view graphs of information created by data used from the database. 
 
-<img width=“941” alt=“Screen Shot 2019-06-03 at 6 31 26 PM” src=“https://user-images.githubusercontent.com/46430768/58838848-e11dfd00-862d-11e9-87b9-eab0858cc26e.png”>
 
-<img width=“929" alt=“Screen Shot 2019-06-03 at 6 32 40 PM” src=“https://user-images.githubusercontent.com/46430768/58838896-0448ac80-862e-11e9-9c87-99574cacf38a.png”>
+![Metrics](public/img/readMe/metrics.png "Metrics")
 
+
+![Scatter Plot](public/img/readMe/scattePlot.png "Scatter Plot")
 
 ## Acknowledgements and Contributions
 
 Thank you to the Izaak Walton and VASOS league for data and resources
 
 Kensey Barker (https://github.com/kenzrad) - Back end framework, Data and charts integration, Metrics and Analysis
-Thomas Smith (https://github.com/slowpossum)- Front end development and design
+
+Thomas Smith (https://github.com/slowpossum)- Front end development and design, logo illustration
+
 Molly Levine(https://github.com/levinemr2) - API calls, Charts integration
+
 Austin Kim (https://github.com/powerpcg5)- Converted CSV to Unix friendly newlines, Research
