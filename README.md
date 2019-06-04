@@ -79,7 +79,7 @@ Thank you to the Izaak Walton and VASOS league for data and resources
 
 Kensey Barker (https://github.com/kenzrad) - Back end framework, Data and charts integration, Metrics and Analysis
 
-Thomas Smith (https://github.com/slowpossum)- Front end development and design
+Thomas Smith (https://github.com/slowpossum)- Front end development and design, logo illustration
 
 Molly Levine(https://github.com/levinemr2) - API calls, Charts integration
 
