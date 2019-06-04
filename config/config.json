@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": null,
+    "password": "Fgsfds!22fgsfds",
     "database": "fieldPet_db",
     "host": "localhost",
     "dialect": "mysql"
