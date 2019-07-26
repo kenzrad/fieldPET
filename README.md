@@ -75,7 +75,7 @@ A user can also view graphs of information created by data used from the databas
 
 Thank you to the Izaak Walton and VASOS league for data and resources
 
-Kensey Barker (https://github.com/kenzrad) - Back End Framework and Data Processing, Charts integration, Metrics and Analysis:
+Kensey Barker (https://github.com/kenzrad) - Back End Framework and Data Processing, Charts integration, Metrics and Analysis
 
 Thomas Smith (https://github.com/slowpossum)- Front End Development and Design, Logo and Icon Art, Optimization
 
